@@ -1,3 +1,4 @@
+import usePast from "../../../hooks/usePast";
 import { FormEvent, useState } from "react";
 
 interface props {}
@@ -7,6 +8,7 @@ export default function Now({}: props) {
   function handleSumbit(e: FormEvent) {
     e.preventDefault();
     /* TODO: Handle Text to Past Component */
+    usePast().setPast([...usePast().Past, Text]);
     setText("");
   }
   return (

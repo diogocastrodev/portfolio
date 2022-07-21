@@ -9,6 +9,7 @@ body {
 
 a,
 button,
-input {
+input,
+.divButton {
   @apply cursor-macOSPointer;
 }
