@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { pastContext } from "../context/PastContext";
+import { useContext, useState } from "react";
 
 export default function usePast() {
-  const [Past, setPast] = useState<string[]>([]);
+  const usePast = useContext(pastContext);
 
-  return {
-    Past,
-    setPast,
-  };
+  return usePast;
 }

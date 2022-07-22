@@ -1,10 +1,28 @@
+import usePast from "../hooks/usePast";
+import commands from "./commands";
+
+export function CommandNotFound({ command }: { command: string }) {
+  return (
+    <div>
+      Command: <span className="italic">{command}</span> was not found.
+    </div>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Clear                                   */
+/* -------------------------------------------------------------------------- */
+
+export function Clear() {
+  const past = usePast();
+  return <>{past.delPast()}</>;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                    Help                                    */
 /* -------------------------------------------------------------------------- */
 
-import commands from "./commands";
-
-function Help() {
+export function Help() {
   return (
     <>
       <div>
@@ -47,7 +65,7 @@ function Help() {
 /* -------------------------------------------------------------------------- */
 /*                                  Software                                  */
 /* -------------------------------------------------------------------------- */
-function SoftwareAliasProduction() {
+export function SoftwareAliasProduction() {
   return (
     <>
       <div></div>
@@ -55,7 +73,7 @@ function SoftwareAliasProduction() {
   );
 }
 
-function SoftwareAliasFonts() {
+export function SoftwareAliasFonts() {
   return (
     <>
       <div></div>
@@ -63,7 +81,7 @@ function SoftwareAliasFonts() {
   );
 }
 
-function Software() {
+export function Software() {
   return (
     <>
       <SoftwareAliasProduction />
@@ -72,4 +90,6 @@ function Software() {
   );
 }
 
-export { Help, SoftwareAliasFonts, SoftwareAliasProduction, Software };
+/* -------------------------------------------------------------------------- */
+/*                                Social Media                                */
+/* -------------------------------------------------------------------------- */

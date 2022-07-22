@@ -1,4 +1,5 @@
 import {
+  Clear,
   Help,
   Software,
   SoftwareAliasFonts,
@@ -23,6 +24,12 @@ const commands: ICommand[] = [
     aliases: ["h"],
     description: "Show help",
     text: <Help />,
+  },
+  {
+    name: "clear",
+    aliases: ["cls"],
+    description: "Clear the terminal",
+    text: <Clear />,
   },
   {
     name: "hardware",
@@ -54,6 +61,12 @@ const commands: ICommand[] = [
         text: <SoftwareAliasFonts />,
       },
     ],
+  },
+  {
+    name: "socials",
+    description: "My social media",
+    aliases: ["social", "media"],
+    text: <Software />,
   },
 ];
 

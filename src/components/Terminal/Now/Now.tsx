@@ -1,20 +1,22 @@
 import usePast from "../../../hooks/usePast";
 import { FormEvent, useState } from "react";
+import PreText from "../PreText";
 
 interface props {}
 
 export default function Now({}: props) {
+  const pastState = usePast();
+  console.log(pastState.allCommands);
   const [Text, setText] = useState("");
   function handleSumbit(e: FormEvent) {
     e.preventDefault();
     /* TODO: Handle Text to Past Component */
-    usePast().setPast([...usePast().Past, Text]);
+    pastState.addPast(Text);
     setText("");
   }
   return (
     <>
-      <div className="flex flex-row w-full">
-        <span className="mr-1">{"castro - % "}</span>
+      <PreText>
         <form onSubmit={handleSumbit} className="flex-1">
           <input
             className="bg-transparent focus:outline-none w-full"
@@ -22,7 +24,7 @@ export default function Now({}: props) {
             onChange={(e) => setText(e.target.value)}
           />
         </form>
-      </div>
+      </PreText>
     </>
   );
 }
