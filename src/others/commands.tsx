@@ -1,6 +1,9 @@
 import {
   Clear,
+  Hardware,
+  HardwareComputer,
   Help,
+  Socials,
   Software,
   SoftwareAliasFonts,
   SoftwareAliasProduction,
@@ -35,12 +38,12 @@ const commands: ICommand[] = [
     name: "hardware",
     description: "My personal hardware",
     aliases: ["hw"],
-    text: "Hardware commands",
+    text: <Hardware />,
     flags: [
       {
         name: "computer",
         description: "Computer commands",
-        text: "Computer components",
+        text: <HardwareComputer />,
       },
     ],
   },
@@ -66,7 +69,7 @@ const commands: ICommand[] = [
     name: "socials",
     description: "My social media",
     aliases: ["social", "media"],
-    text: <Software />,
+    text: <Socials />,
   },
 ];
 
