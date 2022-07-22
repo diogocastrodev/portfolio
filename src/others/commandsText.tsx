@@ -1,5 +1,30 @@
 import usePast from "../hooks/usePast";
 import commands from "./commands";
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from "@fortawesome/react-fontawesome";
+import { faGithub, IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import childrenType from "../types/childrenType";
+import { useEffect } from "react";
+
+function ExternalLink({
+  url,
+  children,
+}: {
+  url: string;
+  children: childrenType;
+}) {
+  return (
+    <a
+      href={url}
+      target={"_blank"}
+      className="underline underline-offset-1 cursor-macOSPointer"
+    >
+      {children}
+    </a>
+  );
+}
 
 export function CommandNotFound({ command }: { command: string }) {
   return (
@@ -15,7 +40,15 @@ export function CommandNotFound({ command }: { command: string }) {
 
 export function Clear() {
   const past = usePast();
-  return <>{past.delPast()}</>;
+  useEffect(() => {
+    past.delPast();
+  }, []);
+
+  return (
+    <>
+      <div></div>
+    </>
+  );
 }
 
 /* -------------------------------------------------------------------------- */
@@ -66,18 +99,40 @@ export function Help() {
 /*                                  Hardware                                  */
 /* -------------------------------------------------------------------------- */
 
-export function Hardware() {
+export function HardwareAliasComputer() {
   return (
     <>
-      <div></div>
+      <div className="flex flex-col">
+        <span className="font-semibold">Computer:</span>
+        <span>CPU: i7-9750H</span>
+        <span>GPU: GTX 1660Ti</span>
+        <span>RAM: 16GB 2667 mHz</span>
+        <br />
+        <span>Looking to buy a MacBook in the future.</span>
+      </div>
     </>
   );
 }
 
-export function HardwareComputer() {
+export function HardwareAliasPeripherals() {
   return (
     <>
-      <div></div>
+      <div className="flex flex-col">
+        <span className="font-semibold">Peripherals:</span>
+        <span>Keyboard: Razer Huntsman</span>
+        <span>Mice: Razer Viper</span>
+        <span>Audio: Apple Earbuds / AirPods Pro</span>
+      </div>
+    </>
+  );
+}
+
+export function Hardware() {
+  return (
+    <>
+      <HardwareAliasComputer />
+      <br />
+      <HardwareAliasPeripherals />
     </>
   );
 }
@@ -88,7 +143,38 @@ export function HardwareComputer() {
 export function SoftwareAliasProduction() {
   return (
     <>
-      <div></div>
+      <div className="flex flex-col">
+        <span className="font-semibold">Production:</span>
+        <span>
+          <ExternalLink url="https://code.visualstudio.com/Download">
+            Visual Studio Code
+          </ExternalLink>
+        </span>
+        <span>
+          <ExternalLink url="https://hyper.is/">Hyper</ExternalLink>
+        </span>
+        <span>
+          <ExternalLink url="https://tableplus.com/">TablePlus</ExternalLink>
+        </span>
+        <span>
+          <ExternalLink url="https://www.postman.com/downloads/">
+            Postman
+          </ExternalLink>
+        </span>
+        <span>
+          <ExternalLink url="https://www.figma.com/downloads/">
+            Figma
+          </ExternalLink>
+        </span>
+        <span>
+          <ExternalLink url="https://linear.app/download">Linear</ExternalLink>
+        </span>
+        <span>
+          <ExternalLink url="https://desktop.github.com/">
+            Github Desktop
+          </ExternalLink>
+        </span>
+      </div>
     </>
   );
 }
@@ -96,7 +182,12 @@ export function SoftwareAliasProduction() {
 export function SoftwareAliasFonts() {
   return (
     <>
-      <div></div>
+      <div className="flex flex-col">
+        <span className="font-semibold">Fonts:</span>
+        <ExternalLink url="https://github.com/tonsky/FiraCode">
+          Fira Code
+        </ExternalLink>
+      </div>
     </>
   );
 }
@@ -105,6 +196,7 @@ export function Software() {
   return (
     <>
       <SoftwareAliasProduction />
+      <br />
       <SoftwareAliasFonts />
     </>
   );
@@ -114,10 +206,37 @@ export function Software() {
 /*                                Social Media                                */
 /* -------------------------------------------------------------------------- */
 
+function Social({
+  name,
+  icon,
+  url,
+  tag,
+}: {
+  name: string;
+  icon: IconDefinition;
+  url: string;
+  tag: string;
+}) {
+  return (
+    <div className="flex flex-row gap-2 items-center">
+      {name}
+      <FontAwesomeIcon icon={icon} /> -
+      <ExternalLink url={url}>@{tag}</ExternalLink>
+    </div>
+  );
+}
+
 export function Socials() {
   return (
     <>
-      <div></div>
+      <div className="flex flex-col">
+        <Social
+          icon={faGithub}
+          name="Github"
+          url="https://github.com/diogocastrodev"
+          tag="diogocastrodev"
+        />
+      </div>
     </>
   );
 }

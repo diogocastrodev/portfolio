@@ -14,9 +14,9 @@ export default function Layout({ children }: props) {
   /* Push to end and focus terminalInput */
   useEffect(() => {
     $("#terminalBody").on("click", (e) => {
-      e.preventDefault();
-      $("#terminalInput").scrollTop($("#terminalInput")[0].scrollHeight);
-      $("#terminalInput").trigger("focus");
+      const scrollTop = window.scrollY;
+      console.log(scrollTop);
+      $("#terminalInput").trigger("focus").scrollTop(scrollTop);
     });
   }, []);
   return (

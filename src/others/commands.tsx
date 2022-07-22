@@ -1,7 +1,8 @@
 import {
   Clear,
   Hardware,
-  HardwareComputer,
+  HardwareAliasComputer,
+  HardwareAliasPeripherals,
   Help,
   Socials,
   Software,
@@ -25,7 +26,7 @@ const commands: ICommand[] = [
   {
     name: "help",
     aliases: ["h"],
-    description: "Show help",
+    description: "Shows all the commands",
     text: <Help />,
   },
   {
@@ -36,38 +37,43 @@ const commands: ICommand[] = [
   },
   {
     name: "hardware",
-    description: "My personal hardware",
+    description: "Hardware that use on my daily life",
     aliases: ["hw"],
     text: <Hardware />,
     flags: [
       {
         name: "computer",
-        description: "Computer commands",
-        text: <HardwareComputer />,
+        description: "Computer information",
+        text: <HardwareAliasComputer />,
+      },
+      {
+        name: "peripheral",
+        description: "Peripherals information",
+        text: <HardwareAliasPeripherals />,
       },
     ],
   },
   {
     name: "software",
-    description: "My personal software",
+    description: "Know what software I use",
     aliases: ["sw", "softw"],
     text: <Software />,
     flags: [
       {
         name: "production",
-        description: "Production commands",
+        description: "Software that I use in production (coding)",
         text: <SoftwareAliasProduction />,
       },
       {
         name: "fonts",
-        description: "Computer commands",
+        description: "Fonts that I use on Visual Studio Code",
         text: <SoftwareAliasFonts />,
       },
     ],
   },
   {
     name: "socials",
-    description: "My social media",
+    description: "Know where to find me",
     aliases: ["social", "media"],
     text: <Socials />,
   },
