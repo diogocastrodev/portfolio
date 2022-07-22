@@ -22,6 +22,7 @@ export default function Now({}: props) {
             className="bg-transparent focus:outline-none w-full"
             value={Text}
             onChange={(e) => setText(e.target.value)}
+            id="terminalInput"
           />
         </form>
       </PreText>
