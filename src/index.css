@@ -5,6 +5,7 @@
 html,
 body {
   @apply cursor-macOSCursor;
+  background: url("./assets/bg-milkyway.jpg") no-repeat center center fixed;
 }
 
 a,
@@ -12,4 +13,25 @@ button,
 input,
 .divButton {
   @apply cursor-macOSPointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-700;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 rounded-full;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
 }

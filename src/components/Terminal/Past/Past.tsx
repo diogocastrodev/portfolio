@@ -9,10 +9,12 @@ export default function Past(props: props) {
   const { Past } = usePast();
   return (
     <>
-      <div>
+      <div className="overflow-y-auto">
         {Past.map((past, index) => {
+          // Command (first block of text)
           const commandName = past.split(" ")[0];
-          const commandAliases = past.split(" ")[1];
+          // Flags (second block of text)
+          const commandFlag = past.split(" ")[1];
 
           // Check for Valid Command
           let command = commands.find(
@@ -29,7 +31,7 @@ export default function Past(props: props) {
           if (command) {
             let validFlag = false;
             let formatedFlag = "";
-            if (commandAliases) {
+            if (commandFlag) {
               // Check Flag name
               const formatFlag = past.split("--")[1].toLowerCase();
               // Check for Valid Flag

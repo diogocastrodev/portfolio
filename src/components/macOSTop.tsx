@@ -27,7 +27,7 @@ export default function MacOSTop({}: props) {
   return (
     <>
       <div className="h-7 w-screen flex bg- relative text-gray-200">
-        <div className="absolute h-7 w-screen backdrop-blur-3xl bg-gray-600 "></div>
+        <div className="absolute h-7 w-screen backdrop-blur-md"></div>
         <div className="px-3 w-full flex flex-row z-20">
           <div className="w-1/2 flex items-center flex-row gap-x-4">
             <AppleIcon
