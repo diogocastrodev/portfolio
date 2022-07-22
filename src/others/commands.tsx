@@ -1,3 +1,4 @@
+import { Experience } from "./commandsText";
 import {
   Clear,
   Hardware,
@@ -76,6 +77,12 @@ const commands: ICommand[] = [
     description: "Know where to find me",
     aliases: ["social", "media"],
     text: <Socials />,
+  },
+  {
+    name: "experience",
+    description: "What I have worked on",
+    aliases: ["skills", "exp"],
+    text: <Experience />,
   },
 ];
 

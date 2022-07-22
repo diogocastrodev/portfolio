@@ -1,12 +1,21 @@
 import usePast from "../hooks/usePast";
 import commands from "./commands";
-import {
-  FontAwesomeIcon,
-  FontAwesomeIconProps,
-} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import childrenType from "../types/childrenType";
 import { useEffect } from "react";
+import TypeScriptIcon from "../components/Icons/TypeScriptIcon";
+import ReactJSIcon from "../components/Icons/ReactJSIcon";
+import NextJSIcon from "../components/Icons/NextJSIcon";
+import NodeJSIcon from "../components/Icons/NodeJSIcon";
+import ExpressJSIcon from "../components/Icons/ExpressJSIcon";
+import TailwindCSSIcon from "../components/Icons/TailwindCSSIcon";
+import PrismaIcon from "../components/Icons/PrismaIcon";
+import PostgreSQLIcon from "../components/Icons/PostgreSQLIcon";
+import MySQLIcon from "../components/Icons/MySQLIcon";
+import JavaScriptIcon from "../components/Icons/JavaScriptIcon";
+import GraphQLIcon from "../components/Icons/GraphQLIcon";
+import PHPIcon from "../components/Icons/PHPIcon";
 
 function ExternalLink({
   url,
@@ -236,6 +245,92 @@ export function Socials() {
           url="https://github.com/diogocastrodev"
           tag="diogocastrodev"
         />
+      </div>
+    </>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Experience                                 */
+/* -------------------------------------------------------------------------- */
+
+export function Experience() {
+  return (
+    <>
+      <div className="flex flex-col">
+        <span className="font-semibold">Experience:</span>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <JavaScriptIcon />
+          </div>
+          JavaScript (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <TypeScriptIcon />
+          </div>
+          TypeScript (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <ReactJSIcon />
+          </div>
+          ReactJS (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <NextJSIcon />
+          </div>
+          NextJS (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <TailwindCSSIcon />
+          </div>
+          TailwindCSS (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <NodeJSIcon />
+          </div>
+          NodeJS (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <ExpressJSIcon />
+          </div>
+          ExpressJS (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <GraphQLIcon />
+          </div>
+          GraphQL (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <PrismaIcon />
+          </div>
+          Prisma (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <PostgreSQLIcon />
+          </div>
+          PostgreSQL (1 year)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <MySQLIcon />
+          </div>
+          MySQL (2 years)
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5">
+            <PHPIcon />
+          </div>
+          php (2 years) (hate it)
+        </div>
       </div>
     </>
   );
