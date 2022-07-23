@@ -1,4 +1,4 @@
-import { Experience } from "./commandsText";
+import { Experience, SoftwareAliasThemes } from "./commandsText";
 import {
   Clear,
   Hardware,
@@ -26,7 +26,7 @@ interface ICommand {
 const commands: ICommand[] = [
   {
     name: "help",
-    aliases: ["h"],
+    aliases: ["h", "commands", "cmds"],
     description: "Shows all the commands",
     text: <Help />,
   },
@@ -38,7 +38,7 @@ const commands: ICommand[] = [
   },
   {
     name: "hardware",
-    description: "Hardware that use on my daily life",
+    description: "Hardware that use on my daily",
     aliases: ["hw"],
     text: <Hardware />,
     flags: [
@@ -69,6 +69,11 @@ const commands: ICommand[] = [
         name: "fonts",
         description: "Fonts that I use on Visual Studio Code",
         text: <SoftwareAliasFonts />,
+      },
+      {
+        name: "themes",
+        description: "Themes that I use on Visual Studio Code",
+        text: <SoftwareAliasThemes />,
       },
     ],
   },

@@ -16,6 +16,10 @@ import MySQLIcon from "../components/Icons/MySQLIcon";
 import JavaScriptIcon from "../components/Icons/JavaScriptIcon";
 import GraphQLIcon from "../components/Icons/GraphQLIcon";
 import PHPIcon from "../components/Icons/PHPIcon";
+import GoIcon from "../components/Icons/GoIcon";
+import RustIcon from "../components/Icons/RustIcon";
+import AWSIcon from "../components/Icons/AWSIcon";
+import JestIcon from "../components/Icons/JestIcon";
 
 function ExternalLink({
   url,
@@ -201,6 +205,22 @@ export function SoftwareAliasFonts() {
   );
 }
 
+export function SoftwareAliasThemes() {
+  return (
+    <>
+      <div className="flex flex-col">
+        <span className="font-semibold">Themes:</span>
+        <ExternalLink url="https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme">
+          One Dark Pro
+        </ExternalLink>
+        <ExternalLink url="https://marketplace.visualstudio.com/items?itemName=atomiks.moonlight">
+          Moonlight II
+        </ExternalLink>
+      </div>
+    </>
+  );
+}
+
 export function Software() {
   return (
     <>
@@ -259,77 +279,101 @@ export function Experience() {
     <>
       <div className="flex flex-col">
         <span className="font-semibold">Experience:</span>
+        <span className="font-medium italic">Improving:</span>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <JavaScriptIcon />
           </div>
-          JavaScript (1 year)
+          JavaScript
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <TypeScriptIcon />
           </div>
-          TypeScript (1 year)
+          TypeScript
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <ReactJSIcon />
           </div>
-          ReactJS (1 year)
+          ReactJS
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <NextJSIcon />
           </div>
-          NextJS (1 year)
+          NextJS
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <TailwindCSSIcon />
           </div>
-          TailwindCSS (1 year)
+          TailwindCSS
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <NodeJSIcon />
           </div>
-          NodeJS (1 year)
+          NodeJS
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <ExpressJSIcon />
           </div>
-          ExpressJS (1 year)
+          ExpressJS
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <GraphQLIcon />
           </div>
-          GraphQL (1 year)
+          GraphQL
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <PrismaIcon />
           </div>
-          Prisma (1 year)
+          Prisma
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <PostgreSQLIcon />
           </div>
-          PostgreSQL (1 year)
+          PostgreSQL
+        </div>
+        <span className="font-medium italic">Learning / Want to learn:</span>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5 flex items-center">
+            <RustIcon />
+          </div>
+          Rust or Go
+          <div className="h-5 w-5 flex items-center">
+            <GoIcon />
+          </div>
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
+            <AWSIcon />
+          </div>
+          AWS
+        </div>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5 flex items-center">
+            <JestIcon />
+          </div>
+          Jest
+        </div>
+        <span className="font-medium italic">Not using anymore:</span>
+        <div className="flex flex-row items-center gap-2">
+          <div className="h-5 w-5 flex items-center">
             <MySQLIcon />
           </div>
-          MySQL (2 years)
+          MySQL
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="h-5 w-5">
+          <div className="h-5 w-5 flex items-center">
             <PHPIcon />
           </div>
-          php (2 years) (hate it)
+          php (hate it)
         </div>
       </div>
     </>

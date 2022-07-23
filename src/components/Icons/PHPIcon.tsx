@@ -17,9 +17,9 @@ export default function PHPIcon() {
             gradientTransform="matrix(.463 0 0 .463 76.464 81.918)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#FFF" />
-            <stop offset=".5" stop-color="#4C6B97" />
-            <stop offset="1" stop-color="#231F20" />
+            <stop offset="0" stopColor="#FFF" />
+            <stop offset=".5" stopColor="#4C6B97" />
+            <stop offset="1" stopColor="#231F20" />
           </radialGradient>
         </defs>
         <ellipse cx="128" cy="67.3" fill="url(#svgIDa)" rx="128" ry="67.3" />
