@@ -33,15 +33,21 @@ export default function Past(props: props) {
             let formatedFlag = "";
             if (commandFlag) {
               // Check Flag name
-              const formatFlag = past.split("--")[1].toLowerCase();
-              // Check for Valid Flag
-              const flag = command.flags?.find(
-                (flag) => flag.name === formatFlag
-              );
-              if (flag) {
-                // Flag Found!
-                validFlag = true;
-                formatedFlag = flag.name;
+              try {
+                const formatFlag = past.split("--")[1].toLocaleLowerCase();
+                // Check for Valid Flag
+                if (formatFlag) {
+                  const flag = command.flags?.find(
+                    (flag) => flag.name === formatFlag
+                  );
+                  if (flag) {
+                    // Flag Found!
+                    validFlag = true;
+                    formatedFlag = flag.name;
+                  }
+                }
+              } catch (error) {
+                // Flag not found
               }
             }
             return (
