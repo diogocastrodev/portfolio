@@ -296,31 +296,31 @@ export function Experience() {
           <div className="h-5 w-5 flex items-center">
             <ReactJSIcon />
           </div>
-          ReactJS
+          React.js
         </div>
         <div className="flex flex-row items-center gap-2">
           <div className="h-5 w-5 flex items-center">
             <NextJSIcon />
           </div>
-          NextJS
+          Next.js
         </div>
         <div className="flex flex-row items-center gap-2">
           <div className="h-5 w-5 flex items-center">
             <TailwindCSSIcon />
           </div>
-          TailwindCSS
+          Tailwind CSS
         </div>
         <div className="flex flex-row items-center gap-2">
           <div className="h-5 w-5 flex items-center">
             <NodeJSIcon />
           </div>
-          NodeJS
+          Node.js
         </div>
         <div className="flex flex-row items-center gap-2">
           <div className="h-5 w-5 flex items-center">
             <ExpressJSIcon />
           </div>
-          ExpressJS
+          Express.js
         </div>
         <div className="flex flex-row items-center gap-2">
           <div className="h-5 w-5 flex items-center">
@@ -332,7 +332,7 @@ export function Experience() {
           <div className="h-5 w-5 flex items-center">
             <PrismaIcon />
           </div>
-          Prisma
+          Prisma.io
         </div>
         <div className="flex flex-row items-center gap-2">
           <div className="h-5 w-5 flex items-center">
