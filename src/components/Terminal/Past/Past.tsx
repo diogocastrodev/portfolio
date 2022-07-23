@@ -18,12 +18,12 @@ export default function Past(props: props) {
 
           // Check for Valid Command
           let command = commands.find(
-            (command) => command.name === commandName
+            (command) => command.name === commandName.toLocaleLowerCase()
           );
           if (!command) {
             // Check if the command is a aliases
             command = commands.find((command) =>
-              command.aliases?.includes(commandName)
+              command.aliases?.includes(commandName.toLocaleLowerCase())
             );
           }
 
