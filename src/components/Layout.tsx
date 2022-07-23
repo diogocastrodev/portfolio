@@ -15,7 +15,6 @@ export default function Layout({ children }: props) {
   useEffect(() => {
     $("#terminalBody").on("click", (e) => {
       const scrollTop = window.scrollY;
-      console.log(scrollTop);
       $("#terminalInput").trigger("focus").scrollTop(scrollTop);
     });
   }, []);

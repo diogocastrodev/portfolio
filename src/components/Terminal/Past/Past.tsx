@@ -51,7 +51,6 @@ export default function Past(props: props) {
                 {validFlag ? (
                   <div>
                     {command.flags?.map((flag, index) => {
-                      console.log(formatedFlag);
                       if (flag.name === formatedFlag) {
                         return (
                           <div key={index}>
