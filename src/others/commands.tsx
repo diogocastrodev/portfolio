@@ -1,5 +1,8 @@
-import { Experience, SoftwareAliasThemes } from "./commandsText";
 import {
+  Experience,
+  SoftwareAliasThemes,
+  Host,
+  Projects,
   Clear,
   Hardware,
   HardwareAliasComputer,
@@ -26,14 +29,14 @@ interface ICommand {
 const commands: ICommand[] = [
   {
     name: "help",
-    aliases: ["h", "commands", "cmds"],
     description: "Shows all the commands",
+    aliases: ["h", "commands", "cmds"],
     text: <Help />,
   },
   {
     name: "clear",
-    aliases: ["cls"],
     description: "Clear the terminal",
+    aliases: ["cls"],
     text: <Clear />,
   },
   {
@@ -62,7 +65,7 @@ const commands: ICommand[] = [
     flags: [
       {
         name: "production",
-        description: "Software that I use in production (coding)",
+        description: "Software that I use while working",
         text: <SoftwareAliasProduction />,
       },
       {
@@ -79,7 +82,7 @@ const commands: ICommand[] = [
   },
   {
     name: "socials",
-    description: "Know where to find me",
+    description: "Know where you can find me",
     aliases: ["social", "media"],
     text: <Socials />,
   },
@@ -88,6 +91,17 @@ const commands: ICommand[] = [
     description: "What I have worked on",
     aliases: ["skills", "exp"],
     text: <Experience />,
+  },
+  {
+    name: "projects",
+    description: "What projects I have done or am working on",
+    aliases: ["proj"],
+    text: <Projects />,
+  },
+  {
+    name: "host",
+    description: "What am I currently using to host my projects",
+    text: <Host />,
   },
 ];
 

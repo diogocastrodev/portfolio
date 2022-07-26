@@ -20,6 +20,7 @@ import GoIcon from "../components/Icons/GoIcon";
 import RustIcon from "../components/Icons/RustIcon";
 import AWSIcon from "../components/Icons/AWSIcon";
 import JestIcon from "../components/Icons/JestIcon";
+import UKFlagIcon from "../components/Icons/UKFlagIcon";
 
 function ExternalLink({
   url,
@@ -29,11 +30,7 @@ function ExternalLink({
   children: childrenType;
 }) {
   return (
-    <a
-      href={url}
-      target={"_blank"}
-      className="underline underline-offset-1 cursor-macOSPointer"
-    >
+    <a href={url} target={"_blank"} className="underline underline-offset-1">
       {children}
     </a>
   );
@@ -78,16 +75,21 @@ export function Help() {
               <div className="font-bold flex flex-row">
                 {command.name}
                 <div className="ml-2 font-normal">
-                  {"["}
-                  {command.aliases?.map((alias, index) => {
-                    return (
-                      <span key={index}>
-                        {alias}
-                        {index !== command.aliases!.length - 1 ? ", " : ""}
-                      </span>
-                    );
-                  })}
-                  {"]"}
+                  {command.aliases && command.aliases?.length > 0 && (
+                    <>
+                      {"("}
+                      {command.aliases?.map((alias, index) => {
+                        return (
+                          <span key={index}>
+                            {alias}
+                            {index !== command.aliases!.length - 1 ? ", " : ""}
+                          </span>
+                        );
+                      })}
+
+                      {")"}
+                    </>
+                  )}
                 </div>
               </div>
               <div>{command.description}</div>
@@ -103,6 +105,10 @@ export function Help() {
             </div>
           );
         })}
+        <div className="italic">Usage:</div>
+        <div>
+          command [--args] <span className="italic">OR</span> (aliases) [--args]
+        </div>
       </div>
     </>
   );
@@ -227,6 +233,8 @@ export function Software() {
       <SoftwareAliasProduction />
       <br />
       <SoftwareAliasFonts />
+      <br />
+      <SoftwareAliasThemes />
     </>
   );
 }
@@ -374,6 +382,100 @@ export function Experience() {
             <PHPIcon />
           </div>
           php (hate it)
+        </div>
+      </div>
+    </>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Projects                                  */
+/* -------------------------------------------------------------------------- */
+
+export function Projects() {
+  return (
+    <>
+      <div className="flex flex-col">
+        <div>
+          <span className="font-semibold">Portfolio</span>:
+          <div>
+            This page, as well as the code behind it, is open source. You can
+            find it on:{" "}
+            <ExternalLink url="https://github.com/diogocastrodev/portfolio">
+              Github
+            </ExternalLink>
+          </div>
+          <div>
+            <span className="italic">Made using:</span>
+            <br />
+            Vite.js, React.js, TypeScript, Tailwind CSS
+          </div>
+          <div>
+            As you can see, my portfolio was made to look like a macOS display
+            with a terminal using custom commands to know me better.
+          </div>
+        </div>
+        <br />
+        <div>
+          <span className="font-semibold">
+            TODO / Notepad <span className="italic">(2022)</span>
+          </span>
+          :
+          <div className="break-words">
+            This project was made for school as a final project, classified by{" "}
+            <span className="font-semibold">20/20</span>.
+          </div>
+          <div className="break-words">
+            <span className="italic">Made using:</span>
+            <br />
+            Next.js, React.js, TypeScript, Tailwind CSS, graphql-request in
+            front-end
+            <br />
+            Node.js, TypeScript, Express.js, ApolloServer, Prisma in back-end
+            (API)
+            <br />
+            PostgreSQL as database.
+          </div>
+          <div className="break-words">
+            Each user had a dashboard after login, where users could create
+            folders and create files inside them. Files could be TODO files or
+            plain text files (draft.js). Each TODO file had a list of TODOs
+            created by the user. User could see all the TODOs in the dashboard
+            section or see individually in the TODO files. Each TODO could have
+            a date or a priority. User could select dates to see the TODOs in a
+            specific date range. User could create priorities from 0 to 999. And
+            filter by priority (from priority with bigger number to 0 and then
+            the TODOs without priorities).
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Host                                    */
+/* -------------------------------------------------------------------------- */
+
+export function Host() {
+  return (
+    <>
+      <div className="flex flex-col">
+        <span className="font-semibold">
+          <ExternalLink url="https://contabo.com/en/vps/">
+            Contabo: Cloud VPS S
+          </ExternalLink>
+        </span>
+        <br />
+        <span className="italic">Specifications:</span>
+        <span>CPU: 4 cores from an AMD EPYC 7282</span>
+        <span>RAM: 8 GB</span>
+        <span>OS: centOS 7</span>
+        <div className="flex flex-row items-center">
+          Region: United Kingdom
+          <div className="ml-2 h-5 w-5 flex items-center">
+            <UKFlagIcon />
+          </div>
         </div>
       </div>
     </>

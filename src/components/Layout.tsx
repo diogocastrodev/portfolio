@@ -5,6 +5,7 @@ import Past from "./Terminal/Past/Past";
 import MacOSTop from "./macOSTop";
 import { useEffect } from "react";
 import $ from "jquery";
+import Introduction from "./Terminal/Introduction/Introduction";
 
 interface props {
   children?: childrenType;
@@ -27,6 +28,7 @@ export default function Layout({ children }: props) {
           className="flex-1 py-1 px-2 text-gray-200 font-firaCode overflow-y-auto bg-gray-700 bg-opacity-90"
           id="terminalBody"
         >
+          <Introduction />
           <Past />
           <Now />
         </div>

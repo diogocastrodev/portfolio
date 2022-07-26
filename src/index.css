@@ -4,15 +4,31 @@
 
 html,
 body {
-  @apply cursor-macOSCursor;
   background: url("./assets/bg-milkyway.jpg") no-repeat center center fixed;
 }
 
+/* Cursor */
+/*
+html,
+body {
+  @apply cursor-macOSCursor;
+}
+
 a,
+a:hover,
 button,
 input,
 .divButton {
   @apply cursor-macOSPointer;
+}
+*/
+
+a,
+a:hover,
+button,
+input,
+.divButton {
+  @apply cursor-pointer;
 }
 
 /* width */
