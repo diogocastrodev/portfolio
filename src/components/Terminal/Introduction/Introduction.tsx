@@ -10,9 +10,6 @@ export default function Introduction() {
   const existClearCommandAliases = allCommands.find((command) =>
     clearCommand?.aliases?.includes(command)
   );
-
-  console.log(existClearCommand);
-  console.log(existClearCommandAliases);
   return (
     <>
       {clearCommand && (
