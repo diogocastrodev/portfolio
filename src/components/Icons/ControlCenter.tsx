@@ -1,4 +1,4 @@
-import controlCenterPng from "../../assets/controlCenter.png";
+import controlCenterPng from "@public/controlCenter.png";
 
 interface props {
   options?: React.HTMLAttributes<HTMLImageElement>;
@@ -7,7 +7,7 @@ interface props {
 export default function ControlCenter({ options }: props) {
   return (
     <>
-      <img src={controlCenterPng} alt="" {...options} />
+      <img src={controlCenterPng.src} alt="" {...options} />
     </>
   );
 }
