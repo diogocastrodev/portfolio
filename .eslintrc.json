@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    /* React */
+    "react/jsx-no-target-blank": "off",
+    "react-hooks/exhaustive-deps": "off",
+    /* NextJS */
+    "@next/next/no-img-element": "off",
+  }
 }
