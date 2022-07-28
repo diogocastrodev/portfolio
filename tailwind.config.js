@@ -10,8 +10,8 @@ module.exports = {
         4.5: "18px",
       },
       cursor: {
-        macOSPointer: "url(src/assets/cursorPointer.png), pointer",
-        macOSCursor: "url(src/assets/cursor.png), default",
+        macOSPointer: "url(public/cursorPointer.png), pointer",
+        macOSCursor: "url(public/cursor.png), default",
       },
       fontFamily: {
         firaCode: ["Fira Code", "monospace"],

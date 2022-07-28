@@ -34,11 +34,13 @@ export default function Now({}: props) {
         <form onSubmit={handleSumbit} className="flex-1">
           <input
             className="bg-transparent focus:outline-none w-full"
+            type="text"
             value={Text}
             onChange={(e) => setText(e.target.value)}
             autoComplete="off"
             id="terminalInput"
             ref={terminalInput}
+            data-lpignore="true"
           />
         </form>
       </PreText>

@@ -408,7 +408,7 @@ export function Projects() {
           <div>
             <span className="italic">Made using:</span>
             <br />
-            Vite.js, React.js, TypeScript, Tailwind CSS
+            Next.js, React.js, TypeScript, Tailwind CSS
           </div>
           <div>
             As you can see, my portfolio was made to look like a macOS display
@@ -440,12 +440,12 @@ export function Projects() {
             Each user had a dashboard after login, where users could create
             folders and create files inside them. Files could be TODO files or
             plain text files (draft.js). Each TODO file had a list of TODOs
-            created by the user. User could see all the TODOs in the dashboard
-            section or see individually in the TODO files. Each TODO could have
-            a date or a priority. User could select dates to see the TODOs in a
-            specific date range. User could create priorities from 0 to 999. And
-            filter by priority (from priority with bigger number to 0 and then
-            the TODOs without priorities).
+            created by the user. The user could see all the TODOs in the
+            dashboard section or see individually in the TODO files. Each TODO
+            could have a date or a priority. The user could select dates to see
+            the TODOs in a specific date range. A user could create priorities
+            from 0 to 999. And filter by priority (from the priority with bigger
+            number to 0 and then the TODOs without priorities).
           </div>
         </div>
       </div>

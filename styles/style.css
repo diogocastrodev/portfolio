@@ -4,7 +4,7 @@
 
 html,
 body {
-  background: url("./assets/bg-milkyway.jpg") no-repeat center center fixed;
+  background: url("../public/bg-milkyway.jpg") no-repeat center center fixed;
 }
 
 /* Cursor */
