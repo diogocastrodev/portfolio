@@ -25,7 +25,7 @@ export default function Layout({ children }: props) {
         <MacOSTop />
         <NavBar />
         <div
-          className="flex-1 py-1 px-2 text-gray-200 font-firaCode overflow-y-auto bg-gray-700 bg-opacity-90"
+          className="flex-1 py-1 px-2 text-gray-200 font-firaCode overflow-y-auto bg-gray-700 bg-opacity-90 text-sm"
           id="terminalBody"
         >
           <Introduction />
