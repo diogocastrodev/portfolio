@@ -123,11 +123,10 @@ export function HardwareAliasComputer() {
     <>
       <div className="flex flex-col">
         <span className="font-semibold">Computer:</span>
-        <span>CPU: i7-9750H</span>
-        <span>GPU: GTX 1660Ti</span>
-        <span>RAM: 16GB 2667 mHz</span>
-        <br />
-        <span>Looking to buy a MacBook in the future.</span>
+        <span>MacBook Pro 14" 2021</span>
+        <span>CPU: M1 Pro (8-Core)</span>
+        <span>GPU: M1 Pro (14-Core)</span>
+        <span>RAM: 16GB</span>
       </div>
     </>
   );
@@ -138,8 +137,6 @@ export function HardwareAliasPeripherals() {
     <>
       <div className="flex flex-col">
         <span className="font-semibold">Peripherals:</span>
-        <span>Keyboard: Razer Huntsman</span>
-        <span>Mice: Razer Viper</span>
         <span>Audio: Apple Earbuds / AirPods Pro</span>
       </div>
     </>
