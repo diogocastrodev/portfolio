@@ -459,21 +459,10 @@ export function Host() {
     <>
       <div className="flex flex-col">
         <span className="font-semibold">
-          <ExternalLink url="https://contabo.com/en/vps/">
-            Contabo: Cloud VPS S
+          <ExternalLink url="https://vercel.com/">
+            Vercel
           </ExternalLink>
         </span>
-        <br />
-        <span className="italic">Specifications:</span>
-        <span>CPU: 4 cores from an AMD EPYC 7282</span>
-        <span>RAM: 8 GB</span>
-        <span>OS: centOS 7</span>
-        <div className="flex flex-row items-center">
-          Region: United Kingdom
-          <div className="ml-2 h-5 w-5 flex items-center">
-            <UKFlagIcon />
-          </div>
-        </div>
       </div>
     </>
   );
